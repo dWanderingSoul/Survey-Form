@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>
+		Survey Form
+	</title>
+	<link href=
+"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+		rel="stylesheet">
+</head>
+
+<body class="bg-red-900">
+	<h1 class="text-3xl text-center 
+			text-red-300 font-bold mt-8">
+	 Meera's tasty Cake Survey Form
+	</h1>
+	<form id="form"
+		class="bg-white max-w-lg mx-auto 
+				mt-8 p-8 rounded-lg shadow-lg">
+		<div class="mb-6">
+			<label for="name"
+				class="block text-gray-700 font-bold mb-2">
+				Name
+			</label>
+			<input type="text" id="name"
+				placeholder="Enter your name"
+				required
+				class="appearance-none border-b w-full py-2 
+						px-3 text-gray-700 leading-tight 
+						focus:outline-none focus:shadow-outline">
+		</div>
+		<div class="mb-6">
+			<label for="email" class="block text-gray-700 font-bold mb-2">
+				Email
+			</label>
+			<input type="email" id="email" placeholder="Enter your email"
+				required
+					class="appearance-none border-b w-full py-2 
+							px-3 text-gray-700 leading-tight 
+							focus:outline-none focus:shadow-outline">
+		</div>
+		<div class="mb-6">
+			<label for="age"
+				class="block text-gray-700 font-bold mb-2">
+				Age
+			</label>
+			<input type="text" id="age" placeholder="Enter your age"
+				required
+				class="appearance-none border-b w-full py-2 
+						px-3 text-gray-700 leading-tight 
+						focus:outline-none focus:shadow-outline">
+		</div>
+		<div class="mb-6">
+			<label for="role" class="block text-gray-700 font-bold mb-2">
+				Which option best describes you?
+			</label>
+			<select name="role" id="role"
+					required
+					class="appearance-none border-b w-full 
+						py-2 px-3 text-gray-700 leading-tight 
+						focus:outline-none focus:shadow-outline">
+				<option value="student">Student</option>
+				<option value="intern">Intern</option>
+				<option value="professional">Professional</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+		<div class="mb-6">
+			<label class="block text-gray-700 font-bold mb-2">
+				Would you recommend Meera's tasty cake to a friend?
+			</label>
+			<div class="flex">
+				<label for="recommed-1" class="mr-4">
+					<input type="radio" id="recommed-1"
+						name="recommed" class="mr-2">Yes
+				</label>
+				<label for="recommed-2" class="mr-4">
+					<input type="radio" id="recommed-2"
+						name="recommed" class="mr-2">No
+				</label>
+				<label for="recommed-3">
+					<input type="radio" id="recommed-3"
+						name="recommed" class="mr-2">Maybe
+				</label>
+			</div>
+		</div>
+		<div class="mb-6">
+			<label class="block text-gray-700 font-bold mb-2">
+				What cake flavor do you love most?
+			</label>
+			<div class="grid grid-cols-2 gap-4">
+				<label for="inp-1">
+					<input type="checkbox" name="inp" class="mr-2">Bento
+				</label>
+				<label for="inp-2">
+					<input type="checkbox" name="inp" class="mr-2">
+					Strawberry
+				</label>
+				<label for="inp-3">
+					<input type="checkbox" name="inp" class="mr-2">
+					Apple
+				</label>
+				<label for="inp-4">
+					<input type="checkbox" name="inp" class="mr-2">
+					Chocolate
+				</label>
+				<label for="inp-5">
+					<input type="checkbox" name="inp" class="mr-2">
+					Banana
+				</label>
+				<label for="inp-6">
+					<input type="checkbox" name="inp" class="mr-2">
+					Vanilla
+				</label>
+				<label for="inp-7">
+					<input type="checkbox" name="inp" class="mr-2">
+					Orange
+				</label>
+				<label for="inp-7">
+					<input type="checkbox" name="inp" class="mr-2">
+					Blueberry
+				</label>
+				<label for="inp-7">
+					<input type="checkbox" name="inp" class="mr-2">
+					Muffin
+				</label>
+				<label for="inp-7">
+					<input type="checkbox" name="inp" class="mr-2">
+					Coconut
+				</label>
+			</div>
+		</div>
+		<div class="mb-6">
+			<label for="comment"
+				class="block text-gray-700 font-bold mb-2">
+				Any comments or suggestions on how we should improve our product?
+			</label>
+			<textarea name="comment" id="comment"
+					required
+					placeholder="Enter your comment here"
+					class="appearance-none border rounded w-full 
+							py-2 px-3 text-gray-700 leading-tight 
+							focus:outline-none focus:shadow-outline">
+			</textarea>
+		</div>
+		<button type="submit"
+				class="bg-gray-600 text-white font-bold py-2 
+						px-4 rounded focus:outline-none 
+						focus:shadow-outline">Submit
+		</button>
+	</form>
+	<div id="message"
+		class=" bg-white max-w-lg mx-auto 
+				mt-8 p-8 rounded-lg shadow-lg">
+		<p class="text-2xl text-center text-gray-600 font-bold">
+			Thank you for submitting the form!
+		</p>
+	</div>
+	<script>
+		document.getElementById('form')
+			.addEventListener('submit', function (event) {
+			event.preventDefault();
+			document.getElementById('form').style.display = 'none';
+			document.getElementById('message').classList.remove('hidden');
+		});
+	</script>
+</body>
+
+</html>
